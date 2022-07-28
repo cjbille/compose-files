@@ -1,0 +1,16 @@
+services:
+  mariadb:
+    image: mariadb:10.7.3
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: streaming
+      MARIADB_USER: streaming
+      MARIADB_PASSWORD: streaming
+      MARIADB_DATABASE: streaming
+    ports:
+        - 3306:3306
+  adminer:
+    image: adminer:4.8.1
+    restart: always
+    ports:
+      - 8090:8080
