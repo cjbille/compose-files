@@ -2,6 +2,7 @@ services:
   postgres:
     container_name: postgres
     image: postgres:15.3
+    environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
@@ -11,6 +12,7 @@ services:
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4:7.2
+    environment:
       - PGADMIN_DEFAULT_EMAIL=postgres@postgres.com
       - PGADMIN_DEFAULT_PASSWORD=postgres
     ports:
