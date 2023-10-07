@@ -1,8 +1,6 @@
 services:
   dynamodb:
     image: amazon/dynamodb-local:2.0.0
-    hostname: dynamodb-local
-    ports:
-      - "8000:8000"
+    network_mode: host
     
-# docker run --rm -it --entrypoint bash amazon/aws-cli:latest
+# docker run --rm -it --entrypoint bash --network host amazon/aws-cli:latest
