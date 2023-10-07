@@ -4,3 +4,6 @@ services:
     hostname: dynamodb-local
     ports:
       - "8000:8000"
+  cli:
+    image: amazon/aws-cli:2.13.25
+    hostname: cli
