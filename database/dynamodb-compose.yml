@@ -5,4 +5,4 @@ services:
     ports:
       - "8000:8000"
     
-# docker run --rm -it amazon/aws-cli:latest
+# docker run --rm -it --entrypoint bash amazon/aws-cli:latest
